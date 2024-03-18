@@ -1,6 +1,5 @@
 "use client";
 
-import "./App.css";
 import React, { useState, createContext, useContext } from "react";
 import { PageContext } from "./PageContext.js";
 import ChatBotComponent from "./ChatbotComponent.js";
