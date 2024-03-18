@@ -1,0 +1,292 @@
+/* styles.css */
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Poppins:wght@200;300&display=swap);
+
+/* .react-chatbot-kit-chat-container{
+width:500px;
+height:100px;
+} */
+.get-started-class {
+  background-color: #245ec2; /* Green */
+  border: none;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 90%;
+}
+.know-more-class {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: #245ec2;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 90%;
+}
+.outer-container {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(234, 234, 234);
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-container {
+  height: 10%;
+  width: 100%;
+  background-color: rgba(205, 199, 227, 0.993);
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.image-container img {
+  border-radius: 10px;
+  width: 45%;
+  height: 100%;
+  padding: 2px;
+}
+.chat-body-container {
+  width: 100%;
+  background-color: rgb(234, 234, 234);
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+.welcome-card {
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 30px;
+  height: 75%;
+  z-index: 0;
+  border-radius: 10px;
+}
+.welcome-card p,
+.welcome-card button {
+  text-align: center;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.welcome-card h3 {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+.profile-image-container {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.profile-image-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.outer-wrapper {
+  display: flex;
+  justify-content: center; /* Horizontally center the container */
+  align-items: center; /* Vertically center the container */
+  /* Full height of the viewport */
+}
+
+.header-outer-div-welcome-page {
+  background-color: #034efc;
+  padding: 5px;
+  color: white;
+}
+.header-para-welcome-page {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+.tooltip-button-welcome-page {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  color: white;
+  background-color: #034efc;
+  border: none;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.header-outer-div-survey-page {
+  background-color: #034efc;
+  padding: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip-button-survey-page {
+  position: absolute;
+  right: 1px;
+  top: 16px;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 20px;
+  padding: 0px;
+  color: white;
+  background-color: #034efc;
+  border: none;
+  font-size: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-para-survey-page {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 5px;
+}
+.image-outer-div-survey-page {
+  position: absolute;
+  margin-bottom: -60px; /* Pull the image out of the parent div */
+  z-index: 1;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: 1px solid rgb(45, 10, 43);
+
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  clip-path: circle(50% at 50% 50%);
+  background: conic-gradient(
+    red 0deg 18deg,
+    /* Adjust colors and angles for each segment */ blue 18deg 36deg,
+    green 36deg 54deg,
+    yellow 54deg 72deg,
+    orange 72deg 90deg,
+    pink 90deg 108deg,
+    purple 108deg 126deg,
+    cyan 126deg 144deg,
+    lightblue 144deg 162deg,
+    lime 162deg 180deg,
+    teal 180deg 198deg,
+    brown 198deg 216deg,
+    indigo 216deg 234deg,
+    lavender 234deg 252deg,
+    maroon 252deg 270deg,
+    olive 270deg 288deg,
+    peachpuff 288deg 306deg,
+    peru 306deg 324deg,
+    rebeccapurple 324deg 342deg,
+    whitesmoke 342deg 360deg
+  );
+}
+.image-survey-page {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  border: 1px solid rgb(45, 10, 43);
+  z-index: 1;
+}
+
+/*Tool-tip*/
+.outer-container-parent {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  justify-content: center; /* Horizontally center the container */
+  align-items: center; /* Vertically center the container */
+  height: 100vh; /* Full height of the viewport */
+  position: relative;
+}
+
+#containerA {
+  background-color: rgba(205, 199, 227, 0.993);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: 0%;
+  z-index: 999;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#paragraph {
+  width: 100%;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+#heading {
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-bottom: 0px;
+  width: 100%;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+#paragraph li {
+  padding-left: 5px;
+  margin-right: 20px;
+}
+#button {
+  margin: 5px auto;
+  background-color: #034efc;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  width: 75px;
+}
+
+#know-more-paragraph-element {
+  padding-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  font-size: 9px;
+  font-family: "Poppins", sans-serif;
+}
+#know-more-heading {
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+#know-more-button {
+  margin: 10px auto;
+  background-color: #034efc;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  width: 75px;
+}
