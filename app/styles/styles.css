@@ -281,7 +281,9 @@ height:100px;
   font-size: 10px;
   font-family: "Poppins", sans-serif;
 }
-#know-more-button {
+#know-more-button,
+#translate-dismiss-button,
+#trash-dismiss-button {
   margin: 10px auto;
   background-color: #034efc;
   color: #ffffff;
@@ -289,4 +291,38 @@ height:100px;
   border: none;
   padding: 5px;
   width: 75px;
+}
+#trash-delete-button {
+  margin: 10px auto;
+  background-color: #e01818;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  width: 75px;
+}
+
+.translate-button-icon {
+  fill: #fff;
+  width: 15px;
+  margin: 0 auto;
+}
+.translate-button-send {
+  background-color: #2898ec;
+  width: 100px;
+  border: none;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+}
+.trash-button-icon {
+  fill: #fff;
+  width: 15px;
+  margin: 0 auto;
+}
+.trash-button-send {
+  background-color: #2898ec;
+  width: 100px;
+  border: none;
+  color: #fff;
+  border-bottom-right-radius: 5px;
 }
