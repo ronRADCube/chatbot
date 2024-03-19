@@ -301,3 +301,28 @@ height:100px;
   padding: 5px;
   width: 75px;
 }
+
+.translate-button-icon {
+  fill: #fff;
+  width: 15px;
+  margin: 0 auto;
+}
+.translate-button-send {
+  background-color: #2898ec;
+  width: 100px;
+  border: none;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+}
+.trash-button-icon {
+  fill: #fff;
+  width: 15px;
+  margin: 0 auto;
+}
+.trash-button-send {
+  background-color: #2898ec;
+  width: 100px;
+  border: none;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+}

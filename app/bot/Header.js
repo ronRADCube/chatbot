@@ -3,7 +3,7 @@ import logo from "../assets/images/profile.jpg"; // Import the image
 import trash from "../assets/images/trash.jpg"; // Import the image
 import translate from "../assets/images/translate.png"; // Import the image
 import { useState, useEffect } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import { usePageContext } from "../PageContext";
 // import { Trash2 } from "lucide-react";
 
@@ -19,58 +19,63 @@ const Header = (props) => {
   // props.state.page === "welcome"
   useEffect(() => {
     if (page === "Welcome") {
-      displayTranslate();
       displayTrash();
+      displayTranslate();
     }
   }, [page]);
 
   const displayTrash = () => {
     console.log("Calling Display Trash");
     console.log("doc trash", document);
-    if (document.getElementsByClassName("trash-button").length === 0) {
-      console.log("Creating trash button");
-      const trashButton = document.createElement("button");
-      trashButton.className = "trash-button";
-      trashButton.addEventListener("click", () => {
-        console.log("Trash Button click", showTrashToolTip);
-        handleTrashToolTip();
-      });
-      const trashImage = document.createElement("img");
-      trashImage.src = "../assets/images/trash.jpg";
-      trashImage.className = "trash-button-icon";
+    // if (document.getElementsByClassName("trash-button").length !== 0) {
+    console.log("Creating trash button");
+    // const trashButton = document.createElement("button");
+    const trashButton = document.getElementsByClassName("trash-button")[0];
+    console.log("trashButton", trashButton);
+    // trashButton.className = "trash-button";
+    trashButton.addEventListener("click", () => {
+      console.log("Trash Button click", showTrashToolTip);
+      handleTrashToolTip();
+    });
+    // const trashImage = document.createElement("img");
+    // trashImage.src = "../assets/images/trash.jpg";
+    // trashImage.className = "trash-button-icon";
 
-      trashButton.appendChild(trashImage);
-      // const translateButton =      document.getElementsByClassName("translate-button")[0];
-      const chatInput = document.getElementsByClassName(
-        "react-chatbot-kit-chat-input-form"
-      )[0];
-      console.log("chatinput", chatInput);
-      chatInput.parentNode.insertBefore(trashButton, chatInput);
-    }
+    // trashButton.appendChild(trashImage);
+    // const translateButton =      document.getElementsByClassName("translate-button")[0];
+    const chatInput = document.getElementsByClassName(
+      "react-chatbot-kit-chat-input-form"
+    )[0];
+    console.log("chatinput", chatInput);
+    chatInput.parentNode.insertBefore(trashButton, chatInput);
+    // }
   };
   const displayTranslate = () => {
     console.log("Calling Display Translate");
     console.log("doc2", document);
-    if (document.getElementsByClassName("translate-button").length === 0) {
-      console.log("Creating translate button");
-      const translateButton = document.createElement("button");
-      translateButton.className = "translate-button";
-      translateButton.addEventListener("click", () => {
-        console.log("Translate Button click", showTranslateToolTip);
-        handleTranslateToolTip();
-      });
-      const translateImage = document.createElement("img");
-      translateImage.src = translate;
-      translateImage.className = "translate-button-icon";
+    // if (document.getElementsByClassName("translate-button").length === 0) {
+    console.log("Creating translate button");
+    // const translateButton = document.createElement("button");
+    const translateButton =
+      document.getElementsByClassName("translate-button")[0];
+    // translateButton.className = "translate-button";
+    console.log("translateButton", translateButton);
+    translateButton.addEventListener("click", () => {
+      console.log("Translate Button click", showTranslateToolTip);
+      handleTranslateToolTip();
+    });
+    // const translateImage = document.createElement("img");
+    // translateImage.src = translate;
+    // translateImage.className = "translate-button-icon";
 
-      translateButton.appendChild(translateImage);
-      // const translateButton =      document.getElementsByClassName("translate-button")[0];
-      const chatInput = document.getElementsByClassName(
-        "react-chatbot-kit-chat-input-form"
-      )[0];
-      console.log("chatinput", chatInput);
-      chatInput.insertAdjacentElement("afterEnd", translateButton);
-    }
+    // translateButton.appendChild(translateImage);
+    // const translateButton =      document.getElementsByClassName("translate-button")[0];
+    const chatInput = document.getElementsByClassName(
+      "react-chatbot-kit-chat-input-form"
+    )[0];
+    console.log("chatinput", chatInput);
+    chatInput.insertAdjacentElement("afterEnd", translateButton);
+    // }
   };
   const displayToolTip = () => {
     console.log(" displayToolTip showToolTip", showToolTip);
@@ -326,6 +331,16 @@ const Header = (props) => {
             onClick={handleWelcomeToolTip}
           >
             🛈
+          </button>
+          <button className="trash-button">
+            <Image alt="logo" className="trash-button-icon" src={trash}></Image>
+          </button>
+          <button className="translate-button">
+            <Image
+              alt="logo"
+              className="translate-button-icon"
+              src={translate}
+            ></Image>
           </button>
           {/* <Trash2 /> */}
         </div>
